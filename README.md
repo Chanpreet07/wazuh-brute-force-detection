@@ -9,6 +9,7 @@ This project demonstrates detection of brute force attacks using Wazuh SIEM and 
 - Ubuntu
 - SSH brute force simulation
 - Linux
+- Powershell
 
 ## ⚙️ Setup
 1. Install Wazuh Manager using Ubuntu
@@ -17,10 +18,11 @@ This project demonstrates detection of brute force attacks using Wazuh SIEM and 
 4. Setup Kali Linux attacker machine
 
 ## 🚨 Attack Simulation
-- Used Hydra to perform SSH brute force attack
+- Used Hydra to perform SSH brute force attack using code -
+hydra -l administrator -P /usr/share/wordlists/rockyou.txt -t 10 ssh://192.168.29.72
 
 ## 📊 Detection
-- Wazuh detected multiple failed login attempts 
+- Wazuh detected multiple failed login attempts with eventis 4625 
 - Alerts generated in dashboard
 
 ## 📸 Screenshots
